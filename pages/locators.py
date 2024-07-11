@@ -4,14 +4,17 @@ from selenium.webdriver.common.by import By
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.XPATH, "//span[@class='btn-group']/a")
+
+class BasketPageLocators():
+    EMPTY_TEXT = (By.XPATH, "//div[@class='content']//p[contains(text(), 'корзина пуста')]")
+    GOODS_LIST = (By.CLASS_NAME, "basket-title")
 
 class MainPageLocators():
     pass
-    # LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
 class LoginPageLocators():
-    # LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_FORM_LINK = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM_LINK = (By.CSS_SELECTOR, "#register_form")
 
